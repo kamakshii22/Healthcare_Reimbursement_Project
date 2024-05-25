@@ -55,4 +55,4 @@ The project successfully developed a predictive model for Medicare reimbursement
 ## GitHub Files
 
 - Jupyter Notebook: [Predicting Future Healthcare Reimbursements](https://github.com/kamakshii22/Healthcare_Reimbursement_Project/blob/main/Healthcare_Reimbursement_Project.ipynb)
-- Report: [Healthcare Reimbursements Prediction Report](https://github.com/yourusername/healthcare-reimbursements/blob/main/Healthcare_Reimbursements_Prediction_Report.pdf)
+- Report: [Healthcare Reimbursements Prediction Report](https://github.com/kamakshii22/Healthcare_Reimbursement_Project/blob/main/Project_report_reimbursement.pdf)
