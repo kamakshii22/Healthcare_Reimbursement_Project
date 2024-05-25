@@ -2,7 +2,7 @@
   Predicting Future Healthcare Reimbursements
 </h1>
 <div align="center">
-  <h4>Author: <a href="https://www.linkedin.com/in/yourprofile">Your Name</a></h4>
+  <h4>Aurthor: <a href="https://www.linkedin.com/in/kamakshisharma22">Kamakshi Sharma</a></h4>
 </div>
 
 This repository contains an analysis focused on predicting future Medicare reimbursements using various machine learning techniques. The project's goal is to assist healthcare providers and policymakers in making strategic decisions and improving financial planning through accurate predictions.
@@ -10,42 +10,25 @@ This repository contains an analysis focused on predicting future Medicare reimb
 ## Data Description
 
 - **Datasets:** Comprehensive information on Medicare enrollees, reimbursement amounts, healthcare services, and demographic factors.
-- **df_state:** State-level data including 52 rows and 17 columns.
-- **df_county:** County-level data with 3144 rows and 17 columns.
+- **df_state:** State-level data & **df_county:** County-level data.
 
 ## Approach
+Extensive **Data Cleaning and Preprocessing** was done to ensure accurate analysis and modeling. This included renaming columns for clarity, removing redundant rows, and handling null values. We converted inappropriate data types to their correct formats and imputed missing values using state-level data to fill county-level gaps, ensuring data completeness and consistency.<br>
 
-1. **Data Cleaning and Preprocessing**
-    - Renamed columns for clarity.
-    - Removed redundant rows and handled null values.
-    - Converted inappropriate data types to ensure accurate analysis.
-    - Imputed missing values using state-level data to fill county-level gaps.
+Performed **Exploratory Data Analysis (EDA)** on both state and county datasets to understand feature distributions and correlations. This included visualizing data to identify patterns and relationships that affect Medicare reimbursements, and addressing any data quality issues discovered during this process.<br>
 
-2. **Exploratory Data Analysis (EDA)**
-    - Analyzed data distribution, identified data quality issues, and addressed them.
-    - Conducted EDA on both state and county datasets to understand feature distributions and correlations.
-    - Visualized data to identify patterns and relationships affecting Medicare reimbursements.
+Does **Feature Engineering** and refined existing ones to enhance model performance. This step also involved mapping and imputing missing values from state-level data for county-level analysis.<br>
 
-3. **Feature Engineering**
-    - Created new features and refined existing ones to enhance model performance.
-    - Mapped and imputed missing values from state-level data for county-level analysis.
+For **Model Building** implemented three regression models:
+  - **Linear Regression**
+  - **Random Forest Regression**
+  - **Gradient Boosting Regression** <br>
+  
+The data was split into training and testing sets (80/20 split). We performed target encoding for categorical variables and normalized features using Min-Max Scaling.<br>
 
-4. **Model Building**
-    - Implemented three regression models:
-        - **Linear Regression**
-        - **Random Forest Regression**
-        - **Gradient Boosting Regression**
-    - Split the data into training and testing sets (80/20 split).
-    - Performed target encoding for categorical variables and normalized features using Min-Max Scaling.
+Done **Model Evaluation** using metrics Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE) & R-squared (R²) Score. 
 
-5. **Model Evaluation**
-    - Evaluated models using metrics:
-        - Mean Absolute Error (MAE)
-        - Mean Squared Error (MSE)
-        - Root Mean Squared Error (RMSE)
-        - R-squared (R²) Score
-
-6. **Model Comparison**
+**Model Comparison**
 
 | Model                       | MAE    | MSE       | RMSE   | R²     |
 |-----------------------------|--------|-----------|--------|--------|
@@ -53,18 +36,17 @@ This repository contains an analysis focused on predicting future Medicare reimb
 | Random Forest Regression    | 250.75 | 158751.21 | 398.44 | 0.923  |
 | Gradient Boosting Regression| 202.24 | 100131.45 | 316.43 | 0.951  |
 
-### Best Model Selection
-- **Linear Regression** was selected as the best model due to its highest R-squared value (0.999) and lowest error metrics (MAE: 10.81, RMSE: 34.81).
+### Best Model Selection <br>
+**Linear Regression** emerged as the best model for predicting Medicare reimbursements, demonstrating the highest R-squared value and the lowest error metrics.
 
 ## Feature Importance Analysis
 
-- Analyzed the coefficients of the linear regression model to identify key factors influencing Medicare reimbursements.
-- **Top Influential Features:**
-    - Total Medicare Reimbursements per Enrollee (Ttl_Mcr_Reim_P_E_14_ASRA)
-    - Hospital Skilled Nursing Reimbursement (Hosp_SN_Reim_P_E_14_P_ASRA)
-    - Outpatient Facility Reimbursement (Outp_Fac_Reim_P_E_14_P_ASRA)
-    - Physician Reimbursement (Phys_Reim_P_E_14_P_ASRA)
-    - Home Health Agency Reimbursement (HHA_Reim_P_E_14_P_ASRA)
+We analyzed the coefficients of the linear regression model to identify key factors influencing Medicare reimbursements. The **top influential features** are:
+  - Total Medicare Reimbursements per Enrollee (Ttl_Mcr_Reim_P_E_14_ASRA)
+  - Hospital Skilled Nursing Reimbursement (Hosp_SN_Reim_P_E_14_P_ASRA)
+  - Outpatient Facility Reimbursement (Outp_Fac_Reim_P_E_14_P_ASRA)
+  - Physician Reimbursement (Phys_Reim_P_E_14_P_ASRA)
+  - Home Health Agency Reimbursement (HHA_Reim_P_E_14_P_ASRA)
 
 ## Conclusion
 
